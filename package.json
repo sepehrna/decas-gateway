@@ -1,18 +1,29 @@
 {
   "name": "decas-node",
   "version": "1.0.0",
+  "type": "module",
   "description": "DeCAS is a decentralized context-aware system. This module is its nodes interface and drivers to work with Raspberry Pi.",
-  "main": "index.js",
   "scripts": {
-    "start": "ts-node src/app.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node dist/app.js",
+    "build": "tsc",
+    "dev": "ts-node src/app.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^20.8.10",
+    "@types/uuid": "^9.0.7",
     "ts-node": "^10.9.1",
     "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "@types/xlsx": "^0.0.36",
+    "axios": "^1.6.5",
+    "dkg.js": "^6.1.1",
+    "rdflib": "^2.2.33",
+    "rxjs": "^7.8.1",
+    "w3bstream-client-js": "^3.1.0",
+    "xlsx": "^0.18.5"
   }
 }
